@@ -8,6 +8,7 @@
 - Preact Signals operate outside of React render loop
 - change in Signal value will not trigger rerender of components that read this value - unless changing that value will trigger other change that requires React to rerender,
 - on one side we receive efficient state management - on the other side, we are bypassing core of how React works, which in theory may make code harder to debug and test (depending on how we use values sent with Signal)
+- we will still need context to pass Signal values down to components that need them - but when we do, we are passing reference to Signal, and not value itself, so changes in that Signal value will not trigger rerender of components that read from that context
 
 ```typescript
 // this will run only once, and not react to changes in signal value
