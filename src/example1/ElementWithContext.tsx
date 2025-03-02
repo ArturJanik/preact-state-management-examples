@@ -1,5 +1,5 @@
+import { Wrapper } from '../components/wrapper/wrapper';
 import { useTestContext } from './context/TestContext';
-import style from './element.module.css';
 
 let counter1 = 0;
 export function ElementWithContextValue1() {
@@ -8,11 +8,11 @@ export function ElementWithContextValue1() {
   counter1 += 1;
 
   return (
-    <div className={style.element}>
+    <Wrapper>
       <p><strong>ElementWithContextValue1</strong></p>
       <p>Context value 1: {value1}</p>
       <p>Render count: {counter1}</p>
-    </div>
+    </Wrapper>
   );
 }
 
@@ -23,10 +23,10 @@ export function ElementWithContextValue2() {
   counter2 += 1;
 
   return (
-    <div className={style.element}>
+    <Wrapper>
       <p><strong>ElementWithContextValue2</strong></p>
       <p>Context value 2: {value2}</p>
       <p>Render count: {counter2}</p>
-    </div>
+    </Wrapper>
   );
 }

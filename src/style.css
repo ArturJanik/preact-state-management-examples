@@ -6,7 +6,7 @@
   font-variation-settings:
     "wdth" 100;
 
-	color: #fff;
+	color: #333;
 	background-color: #ffffff;
 
 	font-synthesis: none;
@@ -85,7 +85,7 @@ textarea:not([rows]) {
 }
 
 html, body {
-	background-color: #313131;
+	background-color: #fff;
 }
 
 body {

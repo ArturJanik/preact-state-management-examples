@@ -1,10 +1,6 @@
-# `create-preact`
+# `preact-state-management-examples`
 
-<h2 align="center">
-  <img height="256" width="256" src="./src/assets/preact.svg">
-</h2>
-
-<h3 align="center">Get started using Preact and Vite!</h3>
+Preact state management and rerendering of children components.
 
 ## Getting Started
 

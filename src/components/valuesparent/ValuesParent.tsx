@@ -1,4 +1,4 @@
-import style from './element.module.css';
+import style from './valuesparent.module.css';
 
 let counter = 0;
 

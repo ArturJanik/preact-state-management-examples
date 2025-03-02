@@ -3,31 +3,27 @@ import { Wrapper } from './components/wrapper/wrapper';
 import { Title } from './components/title/title';
 
 import './style.css';
-import { TestContextProvider } from './example1/context/TestContext';
-import { ElementWithContextValue1, ElementWithContextValue2 } from './example1/ElementWithContext';
-import { UpdateContextValue1Button, UpdateContextValue2Button } from './example1/UpdateContextButton';
-import { ValuesParent } from './example1/ValuesParent';
+
+import { Example1 } from './example1/Example1';
+import { Example2 } from './example2/Example2';
 
 export function App() {
 	return (
 		<main>
 			<Wrapper>
 				<Title>Preact Context</Title>
-				<TestContextProvider>
-					<ValuesParent>
-						<ElementWithContextValue1 />
-						<ElementWithContextValue2 />
-					</ValuesParent>
-					<UpdateContextValue1Button />
-					<UpdateContextValue2Button />
-				</TestContextProvider>
+				<Example1 />
 			</Wrapper>
+
 			<Wrapper>
 				<Title>Preact Signals</Title>
+				<Example2 />
 			</Wrapper>
+
 			<Wrapper>
 				<Title>Zustand</Title>
 			</Wrapper>
+
 			<Wrapper>
 				<Title>Nanostores</Title>
 			</Wrapper>
