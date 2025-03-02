@@ -6,6 +6,7 @@ import './style.css';
 
 import { Example1 } from './example1/Example1';
 import { Example2 } from './example2/Example2';
+import { Example3 } from './example3/Example3';
 
 export function App() {
 	return (
@@ -21,11 +22,12 @@ export function App() {
 			</Wrapper>
 
 			<Wrapper>
-				<Title>Zustand</Title>
+				<Title>Nanostores</Title>
+				<Example3 />
 			</Wrapper>
 
 			<Wrapper>
-				<Title>Nanostores</Title>
+				<Title>Zustand</Title>
 			</Wrapper>
 		</main>
 	);

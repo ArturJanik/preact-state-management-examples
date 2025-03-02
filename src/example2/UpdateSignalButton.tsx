@@ -12,7 +12,7 @@ export function UpdateSignalValue1Button() {
 export function UpdateSignalValue2Button() {
   return (
     <Button onClick={() => updateValue2(value2.value + 1)}>
-      Update context value 2
+      Update signal value 2
     </Button>
   );
 }
