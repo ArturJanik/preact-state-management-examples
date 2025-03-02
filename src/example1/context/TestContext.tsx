@@ -22,7 +22,6 @@ const initialState: TestContextType = {
 };
 
 let value3 = signal(0);
-  
 
 const TestContext = createContext(initialState);
 

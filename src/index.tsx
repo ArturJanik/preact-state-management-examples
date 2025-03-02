@@ -25,10 +25,6 @@ export function App() {
 				<Title>Nanostores</Title>
 				<Example3 />
 			</Wrapper>
-
-			<Wrapper>
-				<Title>Zustand</Title>
-			</Wrapper>
 		</main>
 	);
 }

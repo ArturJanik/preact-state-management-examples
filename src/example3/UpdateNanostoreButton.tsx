@@ -4,7 +4,7 @@ import { updateValue1, updateValue2 } from './stores';
 export function UpdateNanostoreValue1Button() {
   return (
     <Button onClick={() => updateValue1()}>
-      Update context value 1
+      Update nanostore value 1
     </Button>
   );
 }
