@@ -43,8 +43,26 @@ export function ElementWithContextValue3() {
     <Wrapper>
       <p><strong>ElementWithContextValue3</strong></p>
       <p>(value stored as <q>preact signal</q> in context)</p>
+      <p>value resolved by preact from signal</p>
       <p>Context value 3: {value3}</p>
       <p>Render count: {counter3}</p>
+    </Wrapper>
+  );
+}
+
+let counter4 = 0;
+export function ElementWithContextValue4() {
+  const { value4 } = useTestContext();
+
+  counter4 += 1;
+
+  return (
+    <Wrapper>
+      <p><strong>ElementWithContextValue4</strong></p>
+      <p>(value stored as <q>preact signal</q> in context)</p>
+      <p>value resolved explicite from signal with <q>.value</q> syntax</p>
+      <p>Context value 4: {value4.value}</p>
+      <p>Render count: {counter4}</p>
     </Wrapper>
   );
 }

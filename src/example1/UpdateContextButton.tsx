@@ -30,3 +30,13 @@ export function UpdateContextValue3Button() {
     </Button>
   );
 }
+
+export function UpdateContextValue4Button() {
+  const { updateValue4 } = useTestContext();
+
+  return (
+    <Button onClick={updateValue4}>
+      Update context value 4
+    </Button>
+  );
+}
