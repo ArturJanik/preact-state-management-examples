@@ -8,13 +8,7 @@
 	text-transform: uppercase;
 }
 
-.button:disabled {
-	border: 1px solid #999;
-	color: #999;
-	opacity: .7;
-}
-
-.button:not(:disabled):hover {
+.button:hover {
 	background-color: #eee;
 	cursor: pointer;
 }

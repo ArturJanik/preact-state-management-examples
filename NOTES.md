@@ -1,17 +1,20 @@
 # Summary
 
-# Preact context
-- value change will trigger rerender in all components using that context, even when they do not use this specific value,
-- with this in mind, Context is bad choice for dynamic state management (unnecessary rerenders will hurt performance), and should be used only to pass static configuration values.
+# Preact Context
+- context value changes **will** trigger rerender in all components using any values from that context, even when they do not use this specific updated value,
+- context value changes will **not** trigger rerenders in intermediary components, that are children of context provider and ancestor of component using context value, 
+- to sum up, Preact Context is bad choice for dynamic state management (unnecessary rerenders will hurt performance of our app), and should be used only to pass static data, like configuration values.
 
-# Preact signals
+# Preact Signals
 - Docs: https://preactjs.com/guide/v10/signals/
 - Preact Signals operate outside of Preact render loop, which results in fast value updates, but may make code harder to test and debug, depending on how we use it, 
-- Preact can read signal value in JSX directly from signal object - but it won't trigger any rerenders other than change in element that uses value,
+- Preact can read signal value in JSX directly from signal object - it will result in signal value changes not triggering any rerenders of component,
   - to trigger rerender we can read signal value explicitely, using `.value` parameter of signal object,
-- we can use react context to pass signals down to components - when we do, we are passing reference to signal object, and not it's value, so any changes to that signal value will not trigger rerender in components that use other values from that context. 
-  - **This means that in theory we can reuse existing context, and just replace it's dynamic values with signals.**
-- **Keep in mind**: signal value can be mutated from level of component that reads it, just by setting it to new value (as presented in **ElementWithSignalValue2** example). I would say that this is most dangerous part of signals (I'm not sure if it can be turned "off").
+- we can use context to pass signals down to components - this will result in passing references to signal objects, and not it's value, so any changes to that signals values will not trigger rerender in components that use other values from that context,
+  - if we use existing context to do that, and it contains non-signal values next to signals, our components that read signal from this context will still be prone to rerenders induced by changes in other, non-signal, values,
+  - **This means that best solution would be to create separate context exclusively to pass signals in component.** This way we keep advantage of managing signals in one place, and easily passing them to components, and avoid unnecessary rerenders.
+
+> **Keep in mind**: signal value can be mutated from level of component that reads it, just by setting it to new value (as presented in **ElementWithSignalValue2** example). I would say that this is most dangerous part of signals (I'm not sure if it can be turned "off").
 
 ```typescript
 // this will run only once, and not react to changes in signal value

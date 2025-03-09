@@ -1,10 +1,9 @@
 import { useFlashOnRerender } from '../../hooks/useFlashOnRerender';
 import style from './valuesparent.module.css';
 
-let renderCount = 0;
-
 export function ValuesParent({ children }) {
   const { ref } = useFlashOnRerender();
+  let renderCount = 0;
 
   renderCount += 1;
 

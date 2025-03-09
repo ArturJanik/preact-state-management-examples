@@ -26,7 +26,7 @@ export function ElementWithSignalValue2() {
       <p><strong>ElementWithSignalValue2</strong></p>
       <p>Signal value 2: {value2}</p>
       <p>Render count: {counter2}</p>
-      <Button onClick={changeValueFromElementLevel}>Add +2 to signal value by mutating it from within component reading it</Button>
+      <Button onClick={changeValueFromElementLevel}>Add +2 to signal value by mutating it from within same component that reads it</Button>
     </Wrapper>
   );
 }
