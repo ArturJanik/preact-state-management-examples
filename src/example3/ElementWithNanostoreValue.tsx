@@ -1,5 +1,5 @@
 import { useStore } from '@nanostores/preact';
-import { $value1, $value2 } from './stores';
+import { $store, $value1, $value2 } from './stores';
 import { Wrapper } from '../components/wrapper/wrapper';
 
 let counter1 = 0;
@@ -28,6 +28,36 @@ export function ElementWithNanostoreValue2() {
       <p><strong>ElementWithNanostoreValue2</strong></p>
       <p>Value 2: {value2}</p>
       <p>Render count: {counter2}</p>
+    </Wrapper>
+  );
+}
+
+let counter3 = 0;
+export function ElementWithNanostoreValue3() {
+  const { value1 } = useStore($store);
+
+  counter3 += 1;
+
+  return (
+    <Wrapper>
+      <p><strong>ElementWithNanostoreValue3</strong></p>
+      <p>Value 3: {value1}</p>
+      <p>Render count: {counter3}</p>
+    </Wrapper>
+  );
+}
+
+let counter4 = 0;
+export function ElementWithNanostoreValue4() {
+  const { value2 } = useStore($store);
+
+  counter4 += 1;
+
+  return (
+    <Wrapper>
+      <p><strong>ElementWithNanostoreValue4</strong></p>
+      <p>Value 4: {value2}</p>
+      <p>Render count: {counter4}</p>
     </Wrapper>
   );
 }

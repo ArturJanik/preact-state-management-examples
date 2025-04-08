@@ -1,3 +1,5 @@
+import 'preact/debug';
+
 import { render } from 'preact';
 import { Wrapper } from './components/wrapper/wrapper';
 import { Title } from './components/title/title';

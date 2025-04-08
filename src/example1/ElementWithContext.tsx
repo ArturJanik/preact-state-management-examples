@@ -24,7 +24,8 @@ export function ElementWithContextValue2() {
 
   return (
     <Wrapper>
-      <p><strong>value 2 stored using <q>useState</q> in context</strong></p>
+      <p><strong>value 2 stored as <q>preact signal</q> in context</strong></p>
+      <p>read in JSX as signal object <q>value2</q></p>
       <p>Value: {value2}</p>
       <p>Render count: {counter2}</p>
     </Wrapper>
@@ -40,25 +41,9 @@ export function ElementWithContextValue3() {
   return (
     <Wrapper>
       <p><strong>value 3 stored as <q>preact signal</q> in context</strong></p>
-      <p>used in JSX as signal object <q>value3</q></p>
-      <p>Value: {value3}</p>
+      <p>read in JSX as signal value <q>value3.value</q></p>
+      <p>Value: {value3.value}</p>
       <p>Render count: {counter3}</p>
-    </Wrapper>
-  );
-}
-
-let counter4 = 0;
-export function ElementWithContextValue4() {
-  const { value4 } = useTestContext();
-
-  counter4 += 1;
-
-  return (
-    <Wrapper>
-      <p><strong>value 4 stored as <q>preact signal</q> in context</strong></p>
-      <p>used in JSX as signal value <q>value4.value</q></p>
-      <p>Value: {value4.value}</p>
-      <p>Render count: {counter4}</p>
     </Wrapper>
   );
 }

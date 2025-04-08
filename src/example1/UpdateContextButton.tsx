@@ -12,10 +12,10 @@ export function UpdateContextValue1Button() {
 }
 
 export function UpdateContextValue2Button() {
-  const { setValue2 } = useTestContext();
+  const { updateValue2 } = useTestContext();
 
   return (
-    <Button onClick={() => setValue2((prevValue) => prevValue + 1)}>
+    <Button onClick={updateValue2}>
       Update context value 2
     </Button>
   );
@@ -27,16 +27,6 @@ export function UpdateContextValue3Button() {
   return (
     <Button onClick={updateValue3}>
       Update context value 3
-    </Button>
-  );
-}
-
-export function UpdateContextValue4Button() {
-  const { updateValue4 } = useTestContext();
-
-  return (
-    <Button onClick={updateValue4}>
-      Update context value 4
     </Button>
   );
 }

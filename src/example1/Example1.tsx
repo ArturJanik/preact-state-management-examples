@@ -1,7 +1,7 @@
 import { TestContextProvider } from './context/TestContext';
 import { ValuesParent } from '../components/valuesparent/ValuesParent';
-import { ElementWithContextValue1, ElementWithContextValue2, ElementWithContextValue3, ElementWithContextValue4 } from './ElementWithContext';
-import { UpdateContextValue1Button, UpdateContextValue2Button, UpdateContextValue3Button, UpdateContextValue4Button } from './UpdateContextButton';
+import { ElementWithContextValue1, ElementWithContextValue2, ElementWithContextValue3 } from './ElementWithContext';
+import { UpdateContextValue1Button, UpdateContextValue2Button, UpdateContextValue3Button } from './UpdateContextButton';
 
 export function Example1() {
   return (
@@ -11,12 +11,10 @@ export function Example1() {
         <ElementWithContextValue1 />
         <ElementWithContextValue2 />
         <ElementWithContextValue3 />
-        <ElementWithContextValue4 />
       </ValuesParent>
       <UpdateContextValue1Button />
       <UpdateContextValue2Button />
       <UpdateContextValue3Button />
-      <UpdateContextValue4Button />
     </TestContextProvider>
   );
 }
